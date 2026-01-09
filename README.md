@@ -31,3 +31,5 @@ It is created to build strong DSA fundamentals, improve problem-solving skills, 
 ---
 
 ## 📂 Repository Structure
+- Patterns
+- Array
