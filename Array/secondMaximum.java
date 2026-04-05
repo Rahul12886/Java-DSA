@@ -33,3 +33,28 @@ public class array {
 //     Size of array: 5
 //     Elements of array: 100 69 10 12 15
 //     Second Maximum: 69
+
+
+
+__________________  ANOTHER METHOD  _____________________ 
+
+import java.util.*;
+public class secondMaximum {
+    public static void secondMaximumElement(int[] a) {
+        int max = Integer.MIN_VALUE;
+        int Smax = Integer.MIN_VALUE;
+        for(int i=0;i<a.length;i++) {
+            if(a[i]>max) {
+                Smax = max;
+                max = a[i];
+            }
+            
+            else if(a[i]>Smax && a[i]<max) Smax = a[i];
+        }
+        System.out.print(Smax);
+    }
+    public static void main(String args[]) {
+        int[] arr = {10,20,30,40,50,60};
+        secondMaximumElement(arr);
+    }
+}
