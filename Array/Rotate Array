@@ -1,0 +1,35 @@
+import java.util.*;
+public class RotateArray {
+    static void ArrayReverse(int[] x, int start, int end) {
+        while(start < end) {
+            int temp = x[start];
+            x[start] = x[end];
+            x[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    static void rotateArr(int[] z,int a) {
+        int n = z.length;
+        a = a % n;
+        ArrayReverse(z,0,n-1);
+        ArrayReverse(z,0,a-1);
+        ArrayReverse(z,a,n-1);
+    }
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Size: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.print("Enter Elements: ");
+        for(int i=0; i<arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        System.out.print("Enter k: ");
+        int k = sc.nextInt();
+        rotateArr(arr,k);
+        for(int ele : arr) {
+            System.out.print(ele+" ");
+        }
+    }
+}
